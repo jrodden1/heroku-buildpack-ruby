@@ -11,7 +11,7 @@ module LanguagePack
   # @return [LanguagePack] the {LanguagePack} detected
   def self.detect(*args)
     Instrument.instrument 'detect' do
-      Dir.chdir(args.first)
+      Dir.chdir("#{args.first}/automaintainer-backend")
 
       pack = [ NoLockfile, Rails6, Rails5, Rails42, Rails41, Rails4, Rails3, Rails2, Rack, Ruby ].detect do |klass|
         klass.use?
