@@ -4,7 +4,6 @@
 
 BIN_DIR=$(cd $(dirname $0); pwd)
 AM_BIN_DIR="/automaintainer-backend"
-BIN_DIR+="/automaintainer-backend"
 BUILDPACK_DIR=$(dirname $BIN_DIR)
 
 source "$BIN_DIR/support/bash_functions.sh"
