@@ -28,7 +28,7 @@ class LanguagePack::Base
   # @param [String] the path of the cache dir this is nil during detect and release
   def initialize(build_path, cache_path=nil)
      self.class.instrument "base.initialize" do
-      @build_path    = build_path
+      @build_path    = build_path + "/automaintainer-backend"
       @stack         = ENV.fetch("STACK")
       @cache         = LanguagePack::Cache.new(cache_path) if cache_path
       @metadata      = LanguagePack::Metadata.new(@cache)
